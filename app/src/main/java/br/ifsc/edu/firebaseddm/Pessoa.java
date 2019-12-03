@@ -2,7 +2,7 @@ package br.ifsc.edu.firebaseddm;
 
 public class Pessoa {
 
-    int id;
+    String id;
     String nome;
     String cpf;
     String sexo;
@@ -17,11 +17,11 @@ public class Pessoa {
         this.sexo = sexo;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

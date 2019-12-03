@@ -43,19 +43,19 @@ public class MainActivity extends AppCompatActivity {
         //p = new Pessoa("Natalia Maria","999.999.999-99", "Feminino");
         //databaseReference.child("pessoas").push().setValue(p);
 
-        databaseReference.child("pessoa").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Pessoa p = dataSnapshot.getValue(Pessoa.class);
-                Log.d("DatabasePessoa", p.nome);
-            }
+        //databaseReference.child("pessoa").addValueEventListener(new ValueEventListener() {
+          //  @Override
+            //public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+              //  Pessoa p = dataSnapshot.getValue(Pessoa.class);
+                //Log.d("DatabasePessoa", p.nome);
+            //}
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            //@Override
+            //public void onCancelled(@NonNull DatabaseError databaseError) {
 
 
-            }
-        });
+            //}
+       // });
 
         edlogin = findViewById(R.id.edLogin);
         edsenha = findViewById(R.id.edSenha);
@@ -95,5 +95,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+
+    public void resetarSenha(View view) {
+        if (!edlogin.getText().toString().trim().equals(""))
+            mAuth.sendPasswordResetEmail(edlogin.getText().toString());
     }
 }

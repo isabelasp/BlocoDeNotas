@@ -42,5 +42,13 @@
             android:layout_gravity="center"
             android:onClick="cadastrar"
             android:text="Cadastrar" />
+
+        <Button
+            android:id="@+id/resetsenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="resetarSenha"
+            android:text="Reset Senha" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
